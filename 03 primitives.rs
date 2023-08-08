@@ -1,4 +1,21 @@
 fn main() {
+    /* Tipos escalares:
+
+Enteros:
+
+i8, i16, i32, i64, i128: Enteros con signo de 8, 16, 32, 64 y 128 bits respectivamente.
+u8, u16, u32, u64, u128: Enteros sin signo de 8, 16, 32, 64 y 128 bits respectivamente.
+isize, usize: Enteros con y sin signo respectivamente, cuyo tamaño depende del tipo de arquitectura de la máquina (usualmente 32 o 64 bits).
+Punto flotante:
+
+f32: Punto flotante de precisión simple.
+f64: Punto flotante de precisión doble.
+Carácter:
+
+char: Representa un carácter Unicode. Se especifica usando comillas simples, como 'a'.
+Booleano:
+
+bool: Solo tiene dos valores posibles, true o false. */
     // Variables con tipo
     let logical: bool = true;
 
