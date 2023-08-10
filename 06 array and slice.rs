@@ -10,21 +10,21 @@ fn main() {
     // Fixed-size array (type signature is superfluous).
     let xs: [i32; 5] = [1, 2, 3, 4, 5];
 
-    // All elements can be initialized to the same value.
+    // Inicializacion iguak
     let ys: [i32; 500] = [0; 500];
 
-    // Indexing starts at 0.
+    // Indices inican en 0
     println!("First element of the array: {}", xs[0]);
     println!("Second element of the array: {}", xs[1]);
 
-    // `len` returns the count of elements in the array.
+    // funcion len
     println!("Number of elements in array: {}", xs.len());
 
-    // Arrays are stack allocated.
+    // Reserva de memoria
     println!("Array occupies {} bytes", mem::size_of_val(&xs));
 
-    // Arrays can be automatically borrowed as slices.
-    println!("Borrow the whole array as a slice.");
+    // Isar el array como slice
+    println!("USar array como slice.");
     analyze_slice(&xs);
 
     // Slices can point to a section of an array.
