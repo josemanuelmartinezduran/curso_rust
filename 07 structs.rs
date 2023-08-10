@@ -72,4 +72,6 @@ fn main() {
     let Pair(integer, decimal) = pair;
 
     println!("pair contains {:?} and {:?}", integer, decimal);
+
+    print("Emojis 🚀")
 }
