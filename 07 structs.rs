@@ -19,6 +19,15 @@ struct Point {
     y: f32,
 }
 
+struct Rectangulo{
+    let l:i32,
+    let h:i32,
+    
+    fn area(Self) -> i32{
+        (Self.l * Self h)
+    };
+}
+
 // Structs can be reused as fields of another struct
 struct Rectangle {
     // A rectangle can be specified by where the top left and bottom right
@@ -74,4 +83,7 @@ fn main() {
     println!("pair contains {:?} and {:?}", integer, decimal);
 
     print("Emojis 🚀")
+
+    let r = Rectangulo{l:}
+    
 }
