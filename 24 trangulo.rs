@@ -11,14 +11,14 @@ impl Triangulo{
     
     fn pitagoras(t:&mut Triangulo) -> (){
         if t.co == 0.0{
-            let res = (t.h * t.h) - (t.ca * t.ca) as f32;
-            *t.co = res.sqrt();
+            let res = (t.h * t.h) - (t.ca * t.ca);
+            t.co = res.sqrt();
         } else if t.ca == 0.0 {
             let res = (t.h * t.h) - (t.ca * t.ca) as f32;
-            *t.ca = res.sqrt() as f32;
+            t.ca = res.sqrt() as f32;
         } else if t.h == 0.0 {
             let res = (t.h * t.h) - (t.ca * t.ca) as f32;
-            *t.h = res.sqrt() as f32;
+            t.h = res.sqrt() as f32;
         }
     }
 }
