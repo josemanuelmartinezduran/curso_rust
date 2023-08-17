@@ -59,6 +59,27 @@ impl Opera for Multiplicacion {
     }
 }
 
+struct Division{
+    dividendo:f32,
+    divisor:f32
+}
+
+impl Division{
+    fn new(dividendo:f32, divisor:f32)->Self{
+        Self{dividendo, divisor}
+    }
+}
+
+impl Opera for Division{
+    fn opera(&self) -> f32{
+        if self.divisor == 0.0 {
+            0.0f32
+        } else {
+            self.dividendo/self.divisor
+        }
+    }
+}
+
 
 
 fn main(){
@@ -68,4 +89,6 @@ fn main(){
     println!("La resta es {}", r.opera());
     let m = Multiplicacion::new(vec![5.0f32, 4.0f32, 2.0f32]);
     println!("La multiplicacion es {}", m.opera());
+    let d = Division::new(4.5f32, 2.00f32);
+    println!("La division es {}", d.opera());
 }
