@@ -39,9 +39,33 @@ impl Opera for Resta {
     }   
 }
 
+struct Multiplicacion{
+    factores: Vec<f32>
+}
+
+impl Multiplicacion{
+    fn new(factores: Vec<f32>) -> Self{
+        Self{factores}
+    }
+}
+
+impl Opera for Multiplicacion {
+    fn opera(&self) -> f32{
+        let mut mult = 1.0f32;
+        for &i in &self.factores{
+            mult = mult * i;
+        }
+        mult
+    }
+}
+
+
+
 fn main(){
     let s = Suma::new([2.0f32, 5.6f32, 1.00, 0.00, 0.00, 0.00]);
     println!("La suma es {}", s.opera());
     let r = Resta::new(16.24, 2.5);
     println!("La resta es {}", r.opera());
+    let m = Multiplicacion::new(vec![5.0f32, 4.0f32, 2.0f32]);
+    println!("La multiplicacion es {}", m.opera());
 }
