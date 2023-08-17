@@ -14,4 +14,5 @@ impl Ave {
 
 fn main(){
    let a = Ave{especie: "Gaviota".to_string()};
+   
 }
